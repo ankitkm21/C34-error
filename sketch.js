@@ -1,5 +1,5 @@
 var ball;
-var database,location,position;
+var database,location1,position;
 
 function setup(){
     database=firebase.database();
@@ -7,8 +7,8 @@ function setup(){
     ball = createSprite(250,250,10,10);
     ball.shapeColor = "red";
     
-    location=database.ref("Ball/Position");
-    location.on("value",readOperation,showErr);
+    location1=database.ref("Ball/Position");
+    location1.on("value",readOperation,showErr);
 }
 
 function draw(){
